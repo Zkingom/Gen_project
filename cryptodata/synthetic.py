@@ -38,9 +38,9 @@ class SyntheticConfig:
     frac_initial: float = 0.4      # 开始时就已上市的比例，其余在样本期内陆续上市
     frac_delist: float = 0.25      # 样本期内会下架的比例
     min_life: int = 150            # 最短存续天数
-    k_reversal: float = 0.04       # 植入信号强度（单位：特异波动率的倍数）
-    k_momentum: float = 0.025
-    k_funding: float = 0.04
+    k_reversal: float = 0.025      # 植入信号强度（单位：特异波动率的倍数）
+    k_momentum: float = 0.02
+    k_funding: float = 0.03
     dying_days: int = 90           # 下架前的"死亡期"天数
     missing_rate: float = 0.002    # 随机缺失 K 线的比例
     duplicate_rate: float = 0.002  # 随机重复行比例
