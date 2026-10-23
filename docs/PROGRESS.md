@@ -1,5 +1,14 @@
 # 进度
 
+**全部 7 个阶段已完成**，`python -m pytest -q` 共 67 个测试全部通过。
+
+一键复现：
+```bash
+pip install -r requirements.txt
+python -m cryptodata.build --source synthetic --root data
+python -m reports.generate --root data --out reports/output
+```
+
 | 阶段 | 状态 | 说明 |
 |---|---|---|
 | Phase 1 数据层 | ✅ | `cryptodata/`：下载（Binance）/ 合成数据、清洗、parquet 存储、面板读取、流动性股票池 |
@@ -8,6 +17,7 @@
 | Phase 4 带成本回测 | ✅ | `research/backtest.py`：手续费/滑点/资金费、调仓频率、执行延迟、下架强平；手算场景（含一次资金费结算）逐项核对；零成本回测与分组多空收益互相印证 |
 | Phase 5 合成与样本外 | ✅ | `research/combine.py`、`research/oos.py`、`research/overfit.py`：等权/IC 加权、walk-forward、前后半段切分、选择偏差实验；walk-forward 合成因子通过前视篡改测试 |
 | Phase 6 研究报告 | ✅ | `reports/`：`python -m reports.generate` 一键生成 markdown + 5 张图；结论自动生成并标注样本内/外；示例见 `reports/sample_synthetic/report.md` |
+| Phase 7 学习文档 | ✅ | `docs/LEARNING_GUIDE.md`：阅读顺序、8 个核心概念、18 道面试题（标注代码位置）、8 个动手练习 |
 
 ## 数据源说明（重要）
 
@@ -76,3 +86,11 @@ python -m cryptodata.build --source binance --root data
    但等权没有任何估计误差，在信号不稳定的真实市场里，它常常和 IC 加权差不多甚至更稳。
 5. 实验 2 里最优单因子样本外反而略好，是正常的抽样波动——单次切分的样本外结果本身也有噪音，
    所以更推荐 walk-forward 这种多次滚动的评估。
+
+## 已知局限 / 后续可做
+
+- 真实数据下载代码（`cryptodata/download.py`）因环境无法联网未经在线验证，回本地首次运行时请留意报错。
+- 只实现了日线；小时线需要另行设计面板和资金费对齐（按小时归属）。
+- 资金费按"当天开始时的名义价值"计算，忽略了日内价格变动对结算名义价值的影响（二阶小量）。
+- 滑点为固定比例，未按成交额 / 日均成交额建模市场冲击。
+- 合成数据的信号是平稳的，样本内外差距偏小；真实数据上差距通常更大。
