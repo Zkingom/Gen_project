@@ -1,0 +1,12 @@
+# 数据与生成的大文件不入库
+data/
+*.parquet
+*.zip
+reports/output/
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+*.egg-info/
