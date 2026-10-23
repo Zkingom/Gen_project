@@ -31,18 +31,27 @@ def evaluate_signal(signal, panel: Panel, universe, start=None, end=None,
             "_nav": bt.nav.loc[start:end]}
 
 
+def walk_forward_composite(zscores: dict, ic: pd.DataFrame, window: int = 365,
+                           refit_every: int = 30):
+    """walk-forward IC 加权合成因子。返回 (合成信号, 时变权重, 样本外起始日)。
+
+    至少积累半个窗口的 IC 才开始估计权重；起始日之前信号置 NaN（不交易）。
+    """
+    w = rolling_ic_weights(ic, window, h=1, refit_every=refit_every, min_periods=window // 2)
+    start = oos_start(w)
+    return combine(zscores, w).loc[start:].reindex(ic.index), w, start
+
+
 def walk_forward_study(signals: dict, panel: Panel, universe, window: int = 365,
                        refit_every: int = 30, bt_cfg: BacktestConfig = BacktestConfig()):
     """实验 1：三种合成方式在同一样本外区间的表现。返回 (结果表, 净值曲线, 权重)。"""
     zs = {n: cs_zscore(f, universe) for n, f in signals.items()}
     ic = daily_ic_table(signals, panel, universe)
-    # 至少积累半个窗口的 IC 才开始估计权重
-    w_wf = rolling_ic_weights(ic, window, h=1, refit_every=refit_every, min_periods=window // 2)
-    start = oos_start(w_wf)
+    wf_signal, w_wf, start = walk_forward_composite(zs, ic, window, refit_every)
     variants = {
         "等权（无需估计）": combine(zs, equal_weights(signals)),
         "IC加权-全样本权重【样本内】": combine(zs, full_sample_ic_weights(ic)),
-        "IC加权-walk-forward【样本外】": combine(zs, w_wf),
+        "IC加权-walk-forward【样本外】": wf_signal,
     }
     rows, navs = {}, {}
     for name, sig in variants.items():
