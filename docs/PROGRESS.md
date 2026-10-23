@@ -4,6 +4,7 @@
 |---|---|---|
 | Phase 1 数据层 | ✅ | `cryptodata/`：下载（Binance）/ 合成数据、清洗、parquet 存储、面板读取、流动性股票池 |
 | Phase 2 因子库 | ✅ | `factors/`：8 个因子，统一接口 + 注册表；每个因子 2 种前视测试 + 截断测试 |
+| Phase 3 因子评估 | ✅ | `research/labels.py`、`research/evaluation.py`、`research/pipeline.py`：IC/RankIC/ICIR/衰减/分组/换手/相关性；完美因子 RankIC=1、错位一天 IC≈0、随机因子 IC≈0 |
 
 ## 数据源说明（重要）
 
