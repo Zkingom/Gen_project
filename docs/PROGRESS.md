@@ -17,7 +17,7 @@ python -m reports.generate --root data --out reports/output
 | Phase 4 带成本回测 | ✅ | `research/backtest.py`：手续费/滑点/资金费、调仓频率、执行延迟、下架强平；手算场景（含一次资金费结算）逐项核对；零成本回测与分组多空收益互相印证 |
 | Phase 5 合成与样本外 | ✅ | `research/combine.py`、`research/oos.py`、`research/overfit.py`：等权/IC 加权、walk-forward、前后半段切分、选择偏差实验；walk-forward 合成因子通过前视篡改测试 |
 | Phase 6 研究报告 | ✅ | `reports/`：`python -m reports.generate` 一键生成 markdown + 5 张图；结论自动生成并标注样本内/外；示例见 `reports/sample_synthetic/report.md` |
-| Phase 7 学习文档 | ✅ | `docs/LEARNING_GUIDE.md`：阅读顺序、8 个核心概念、18 道面试题（标注代码位置）、8 个动手练习 |
+| Phase 7 学习文档 | ✅ | `learning/` 文件夹（原 `docs/LEARNING_GUIDE.md` 已拆分）：阅读顺序、8 个核心概念、18 道面试题（标注代码位置）、8 个动手练习 |
 
 ## 数据源说明（重要）
 

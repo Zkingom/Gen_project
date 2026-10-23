@@ -1,7 +1,7 @@
 # 加密货币横截面因子研究平台
 
 Binance USDT 本位永续合约的横截面因子研究流程：数据 → 因子 → 评估 → 带成本回测 → 合成与样本外检验 → 报告。
-学习路线见 [`docs/LEARNING_GUIDE.md`](docs/LEARNING_GUIDE.md)，示例报告见 [`reports/sample_synthetic/report.md`](reports/sample_synthetic/report.md)（合成数据）。
+学习资料见 [`learning/`](learning/README.md)（单独文件夹），示例报告见 [`reports/sample_synthetic/report.md`](reports/sample_synthetic/report.md)（合成数据）。
 
 ## 快速开始
 
@@ -28,4 +28,5 @@ python -m pytest -q
 | `research/` | 标签、IC 评估、分组回测、带成本回测、因子合成、walk-forward、过拟合实验 |
 | `reports/` | 报告生成（markdown + matplotlib） |
 | `tests/` | pytest：前视偏差、对齐、手算回测、完美因子等 |
-| `docs/` | PROGRESS / DECISIONS / BLOCKERS / LEARNING_GUIDE |
+| `docs/` | PROGRESS / DECISIONS / BLOCKERS |
+| `learning/` | 学习资料：阅读顺序、核心概念（每个一篇）、面试题、练习 |
