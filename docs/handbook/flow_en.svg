@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 176" font-family="Inter, 'WenQuanYi Zen Hei', 'PingFang SC', 'Microsoft YaHei', sans-serif">
+<rect width="1000" height="176" fill="#ffffff"/>
+<rect x="5" y="10" width="150" height="66" rx="6" fill="#eaf2fc" stroke="#2a78d6" stroke-width="1.4"/>
+<text x="80.0" y="38" text-anchor="middle" font-size="18" font-weight="600" fill="#0b0b0b">Data</text>
+<text x="80.0" y="60" text-anchor="middle" font-size="11.5" fill="#52514e" font-family="JetBrains Mono, monospace">cryptodata/</text>
+<line x1="80.0" y1="76" x2="80.0" y2="102" stroke="#c3c2b7" stroke-dasharray="3 3"/>
+<rect x="5" y="102" width="150" height="38" rx="6" fill="#fdf3e7" stroke="#eb6834" stroke-width="1"/>
+<text x="80.0" y="126" text-anchor="middle" font-size="11.5" fill="#0b0b0b">timing · delistings kept</text>
+<path d="M158 41 H168" stroke="#52514e" stroke-width="1.6"/>
+<path d="M165 36 L171 41 L165 46 Z" fill="#52514e"/>
+<rect x="173" y="10" width="150" height="66" rx="6" fill="#eaf2fc" stroke="#2a78d6" stroke-width="1.4"/>
+<text x="248.0" y="38" text-anchor="middle" font-size="18" font-weight="600" fill="#0b0b0b">Factors</text>
+<text x="248.0" y="60" text-anchor="middle" font-size="11.5" fill="#52514e" font-family="JetBrains Mono, monospace">factors/</text>
+<line x1="248.0" y1="76" x2="248.0" y2="102" stroke="#c3c2b7" stroke-dasharray="3 3"/>
+<rect x="173" y="102" width="150" height="38" rx="6" fill="#fdf3e7" stroke="#eb6834" stroke-width="1"/>
+<text x="248.0" y="126" text-anchor="middle" font-size="11.5" fill="#0b0b0b">tamper · truncate</text>
+<path d="M326 41 H336" stroke="#52514e" stroke-width="1.6"/>
+<path d="M333 36 L339 41 L333 46 Z" fill="#52514e"/>
+<rect x="341" y="10" width="150" height="66" rx="6" fill="#eaf2fc" stroke="#2a78d6" stroke-width="1.4"/>
+<text x="416.0" y="38" text-anchor="middle" font-size="18" font-weight="600" fill="#0b0b0b">Evaluation</text>
+<text x="416.0" y="60" text-anchor="middle" font-size="11.5" fill="#52514e" font-family="JetBrains Mono, monospace">research/evaluation</text>
+<line x1="416.0" y1="76" x2="416.0" y2="102" stroke="#c3c2b7" stroke-dasharray="3 3"/>
+<rect x="341" y="102" width="150" height="38" rx="6" fill="#fdf3e7" stroke="#eb6834" stroke-width="1"/>
+<text x="416.0" y="126" text-anchor="middle" font-size="11.5" fill="#0b0b0b">perfect / lagged / random</text>
+<path d="M494 41 H504" stroke="#52514e" stroke-width="1.6"/>
+<path d="M501 36 L507 41 L501 46 Z" fill="#52514e"/>
+<rect x="509" y="10" width="150" height="66" rx="6" fill="#eaf2fc" stroke="#2a78d6" stroke-width="1.4"/>
+<text x="584.0" y="38" text-anchor="middle" font-size="18" font-weight="600" fill="#0b0b0b">Cost backtest</text>
+<text x="584.0" y="60" text-anchor="middle" font-size="11.5" fill="#52514e" font-family="JetBrains Mono, monospace">research/backtest</text>
+<line x1="584.0" y1="76" x2="584.0" y2="102" stroke="#c3c2b7" stroke-dasharray="3 3"/>
+<rect x="509" y="102" width="150" height="38" rx="6" fill="#fdf3e7" stroke="#eb6834" stroke-width="1"/>
+<text x="584.0" y="126" text-anchor="middle" font-size="11.5" fill="#0b0b0b">hand-checked P/L</text>
+<path d="M662 41 H672" stroke="#52514e" stroke-width="1.6"/>
+<path d="M669 36 L675 41 L669 46 Z" fill="#52514e"/>
+<rect x="677" y="10" width="150" height="66" rx="6" fill="#eaf2fc" stroke="#2a78d6" stroke-width="1.4"/>
+<text x="752.0" y="38" text-anchor="middle" font-size="18" font-weight="600" fill="#0b0b0b">Combine + OOS</text>
+<text x="752.0" y="60" text-anchor="middle" font-size="11.5" fill="#52514e" font-family="JetBrains Mono, monospace">research/combine, oos</text>
+<line x1="752.0" y1="76" x2="752.0" y2="102" stroke="#c3c2b7" stroke-dasharray="3 3"/>
+<rect x="677" y="102" width="150" height="38" rx="6" fill="#fdf3e7" stroke="#eb6834" stroke-width="1"/>
+<text x="752.0" y="126" text-anchor="middle" font-size="11.5" fill="#0b0b0b">shift(h) · selection bias</text>
+<path d="M830 41 H840" stroke="#52514e" stroke-width="1.6"/>
+<path d="M837 36 L843 41 L837 46 Z" fill="#52514e"/>
+<rect x="845" y="10" width="150" height="66" rx="6" fill="#eaf2fc" stroke="#2a78d6" stroke-width="1.4"/>
+<text x="920.0" y="38" text-anchor="middle" font-size="18" font-weight="600" fill="#0b0b0b">Report</text>
+<text x="920.0" y="60" text-anchor="middle" font-size="11.5" fill="#52514e" font-family="JetBrains Mono, monospace">reports/</text>
+<line x1="920.0" y1="76" x2="920.0" y2="102" stroke="#c3c2b7" stroke-dasharray="3 3"/>
+<rect x="845" y="102" width="150" height="38" rx="6" fill="#fdf3e7" stroke="#eb6834" stroke-width="1"/>
+<text x="920.0" y="126" text-anchor="middle" font-size="11.5" fill="#0b0b0b">IS / OOS labels</text>
+<text x="5" y="164" font-size="12" fill="#898781">Bias guard attached to each step</text>
+</svg>
